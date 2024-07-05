@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер привычек</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <div class="panel">
+            <img src="./image/logo.svg" alt="logo">
+            <nav class="menu">
+                <div class="menu__list"></div>
+                <button class="menu__item">
+                    <img src="./image/add.svg" alt="add habit">
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="content__progress">
+                <h1 class="content__title">Отжимания</h1>
+                <div class="content__progress-percent">
+                    <span class="progress">Прогресс <span class="progress1">80%</span></span>
+                    <div class="scroll"><div class="scroll__color"></div></div>
+                </div>
+            </div>
+        <div class="about__days">
+            <form class="form__days" action="" method="get">
+                <div class="about__days-desc">
+                    <label for="name">День 1</label>
+                    <span class="about__days-info-one">Первый подход всегда даётся тяжело</span>
+                    <button class="form__delete">
+                        <img src="./image/delete.svg" alt="delete">
+                    </button>
+                </div>
+                <div class="about__days-desc">
+                    <label for="name">День 2</label>
+                    <img class="image__cloud" src="./image/cloud.svg" alt="cloud">
+                    <div class="input__wrapper">
+                        <input type="text" placeholder="Комментарий">
+                    </div>
+                    <button class="form__add">Готово</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
