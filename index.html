@@ -21,34 +21,63 @@
             </nav>
         </div>
         <div class="content">
-            <div class="content__progress">
-                <h1 class="content__title">Отжимания</h1>
-                <div class="content__progress-percent">
-                    <span class="progress">Прогресс <span class="progress1">80%</span></span>
-                    <div class="scroll"><div class="scroll__color"></div></div>
-                </div>
-            </div>
-        <div class="about__days">
-            <form class="form__days" action="" method="get">
-                <div class="about__days-desc">
-                    <label for="name">День 1</label>
-                    <span class="about__days-info-one">Первый подход всегда даётся тяжело</span>
-                    <button class="form__delete">
-                        <img src="./image/delete.svg" alt="delete">
-                    </button>
-                </div>
-                <div class="about__days-desc">
-                    <label for="name">День 2</label>
-                    <img class="image__cloud" src="./image/cloud.svg" alt="cloud">
-                    <div class="input__wrapper">
-                        <input type="text" placeholder="Комментарий">
+            <header>
+                <div class="content__progress">
+                    <h1 class="content__title"></h1>
+                    <div class="content__progress-percent">
+                        <div class="progress">Прогресс 
+                            <div class="progress-percent"></div>
+                        </div>
+                        <div class="scroll"><div class="scroll-active"></div></div>
                     </div>
-                    <button class="form__add">Готово</button>
                 </div>
-            </form>
-        </div>
+            </header>
+            <main>
+                <div id="days">
+                    <div class="habbit">
+                    </div>
+                </div>
+                    <div class="habbit">
+                        <div class="habbit__day"></div>
+                        <form onsubmit="createDay(event)" class="habbit__form" method="get">
+                            <img class="image__cloud" src="./image/cloud.svg" alt="cloud">
+                            <div class="input__wrapper">
+                                <input class="about__comment" type="text" name="comment" placeholder="Комментарий">
+                            </div>
+                            <button type="submit" class="form__add">Готово</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
     </div>
     </div>
+<div id="modal__window">
+    <div class="modal__window-header">
+        <h1 class="modal__window-title">Новая привычка</h1>
+        <button class="modal__window-cross">
+            <img src="./image/cross.svg" alt="cross">
+        </button>
+    </div>
+    <div class="modal__window-info">Иконка</div>
+    <div class="mogal__window-buttons">
+        <button class="menu__item">
+            <img src="./image/gym.svg" alt="gym">
+        </button>
+        <button class="menu__item menu__item-activ">
+            <img src="./image/water.svg" alt="water">
+        </button>
+        <button class="menu__item">
+            <img src="./image/food.svg" alt="food">
+        </button>
+    </div>
+    <div class="modal__window-add_habbits">
+        <input class="modal__window-input" type="text" placeholder="Название">
+        <input class="modal__window-input" type="text" placeholder="Цель">
+    </div>
+    <div class="modal__window-wrapper_btn">
+        <button class="modal__window-btn">Добавить</button>
+    </div>
+</div>
     <script src="./scripts/app.js"></script>
 </body>
 </html>
