@@ -139,12 +139,13 @@ button {
 
 .habbit__day {
     background-color: var(--white);
-    display: inline-block;
     padding: 19px 40px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     margin-left: 41px;
+    min-width: 150px;
 }
+
 .habbit__comment {
     background-color: var(--white);
     padding: 19px 700px 19px 24px;
@@ -292,4 +293,118 @@ button {
     border-radius: 9px;
     background: rgb(237, 236, 254);
     padding: 14px 20px 11px 26px;
+}
+
+/* modal window */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #3a353575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay__hidden {
+    display: none;
+}
+
+.modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 8px 14px 12px rgba(56, 56, 56, 0.05);
+    background: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 424px;
+    padding: 20px 20px 40px 20px;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+.icon__label {
+    color: rgb(118, 131, 150);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 10px;
+}
+
+
+.icon__select {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    border: 1px solid rgb(80, 81, 249);
+    border-radius: 14px;
+}
+
+.modal__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal__form input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgb(231, 235, 251);
+    border-radius: 9px;
+    background: rgb(255, 255, 255);
+    padding: 10px 0px 10px 20px;
+}
+
+.close__btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+}
+
+.icon__active {
+    background: var(--blue);
+}
+
+.icon__active img {
+    filter: brightness(0) invert(1);
+}
+
+.icon:hover {
+    background: var(--lightBlue);
+}
+
+.icon:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.button {
+    color: rgb(80, 81, 249);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 14px;
+    border-radius: 9px;
+    background: rgb(237, 236, 254);
+    padding: 13px 20px;
 }

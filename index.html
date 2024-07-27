@@ -15,7 +15,7 @@
             <img src="./image/logo.svg" alt="logo">
             <nav class="menu">
                 <div class="menu__list"></div>
-                <button class="menu__item">
+                <button onclick="toggleModal()" class="menu__item">
                     <img src="./image/add.svg" alt="add habit">
                 </button>
             </nav>
@@ -48,36 +48,35 @@
                         </form>
                     </div>
                 </div>
+                <div class="overlay overlay__hidden">
+                    <div class="modal" id="modal">
+                        <h2>Новая привычка</h2>
+                        <div class="icon__label">Иконка</div>
+                        <div class="icon__select">
+                            <button onclick="setIcon(this, 'gym')" class="icon icon__active">
+                                <img src="./image/gym.svg" alt="gym">
+                            </button>
+                            <button onclick="setIcon(this, 'water')" class="icon">
+                                <img src="./image/water.svg" alt="water">
+                            </button>
+                            <button onclick="setIcon(this, 'food')" class="icon">
+                                <img src="./image/food.svg" alt="food">
+                            </button>
+                        </div>
+                        <button onclick="toggleModal()" class="icon close__btn">
+                            <img src="./image/cross.svg" alt="close modal">
+                        </button>
+                        <form class="modal__form">
+                            <input type="text" name="name" placeholder="Название">
+                            <input type="text" hidden name="icon" class="modal__form-icon-input">
+                            <input type="number" name="target" placeholder="Цель">
+                            <button class="button" type="submit">Добавить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
             </main>
     </div>
-    </div>
-<div id="modal__window">
-    <div class="modal__window-header">
-        <h1 class="modal__window-title">Новая привычка</h1>
-        <button class="modal__window-cross">
-            <img src="./image/cross.svg" alt="cross">
-        </button>
-    </div>
-    <div class="modal__window-info">Иконка</div>
-    <div class="mogal__window-buttons">
-        <button class="menu__item">
-            <img src="./image/gym.svg" alt="gym">
-        </button>
-        <button class="menu__item menu__item-activ">
-            <img src="./image/water.svg" alt="water">
-        </button>
-        <button class="menu__item">
-            <img src="./image/food.svg" alt="food">
-        </button>
-    </div>
-    <div class="modal__window-add_habbits">
-        <input class="modal__window-input" type="text" placeholder="Название">
-        <input class="modal__window-input" type="text" placeholder="Цель">
-    </div>
-    <div class="modal__window-wrapper_btn">
-        <button class="modal__window-btn">Добавить</button>
-    </div>
-</div>
     <script src="./scripts/app.js"></script>
 </body>
 </html>

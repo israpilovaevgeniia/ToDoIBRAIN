@@ -14,6 +14,10 @@ const page = {
     content: {
         habbitDay: document.querySelector("#days"),
         nextDay: document.querySelector(".habbit__day")
+    },
+    modal: {
+        overlay: document.querySelector(".overlay"),
+        hiddenInput: document.querySelector(".modal__form-icon-input")
     }
 };
 
@@ -82,7 +86,7 @@ function renderContent (activeHabbit) {
             <div class="habbit__day">День ${idx + 1}</div>
             <div class="habbit__comment">${day.comment }</div>
             <button class="form__delete">
-            <img src="./image/delete.svg" alt="delete">
+            <img class="delete__img" src="./image/delete.svg" alt="delete">
             </button>
             `;
         page.content.habbitDay.appendChild(element);
@@ -101,6 +105,7 @@ function createDay (event) {
     //Валидация 
     if(!comment) {
         form["comment"].classList.add("error");
+        return;
     }else {
         form["comment"].classList.remove("error");
     }
@@ -130,7 +135,6 @@ function removeDay (activeHabbit) {
             const updatedDays = activeHabbit.days.reduce ((acc, day, dayIndex) => {
                 if(dayIndex !== dayIndexToRemove) {
                     acc.push(day);
-                    return acc;
                 }
                 return acc;
             }, []); 
@@ -139,6 +143,18 @@ function removeDay (activeHabbit) {
             rerender(activeHabbit.id);   
         })
     })
+}
+
+function toggleModal () {
+    page.modal.overlay.classList.toggle("overlay__hidden");
+}
+
+function setIcon ( ctx, icon) {
+    page.modal.hiddenInput.value = icon;
+    const activeIcon = document.querySelector(".icon__active");
+    activeIcon.classList.remove("icon__active");
+    ctx.classList.add("icon__active");
+
 }
 
 
@@ -157,3 +173,4 @@ function rerender(activeHabbitId) {
     getData();
     rerender(habbits[0].id);
 }) ();
+
