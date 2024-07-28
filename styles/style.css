@@ -133,53 +133,50 @@ button {
 }
 
 .habbit {
-    margin-bottom: 15px;
     display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    align-items: center;
+    margin: 12px 40px 0 40px;
 }
 
 .habbit__day {
-    background-color: var(--white);
-    padding: 19px 40px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    margin-left: 41px;
     min-width: 150px;
+    background-color: var(--white);
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid rgb(231,235,251);
+    font-size: 14px;
+    padding: 20px 40px;
 }
 
 .habbit__comment {
-    background-color: var(--white);
-    padding: 19px 700px 19px 24px;
-    color: rgb(35, 35, 95);
     font-size: 16px;
-    font-weight: 500;
     line-height: 18px;
-    position: relative;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-left: 2px;
+    padding: 20px 25px;
 }
 
-.form__delete {
-    position: absolute;
-    right: 63px;
-    top: 126px;
-    border: 1px dashed rgb(200, 197, 197);
+.habbit__delete {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+   
 }
 
 .habbit__form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px 0 25px;
     position: relative;
-    box-sizing: border-box;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-left: 2px;
 }
 
 .image__cloud {
     position: absolute;
     top: 19px;
     z-index: 3;
-    left: 32px;
-    border: 1px dashed rgb(200, 197, 197);
+    left: 62px;
 }
 
 .input__wrapper {

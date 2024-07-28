@@ -33,10 +33,7 @@
                 </div>
             </header>
             <main>
-                <div id="days">
-                    <div class="habbit">
-                    </div>
-                </div>
+                <div id="days"></div>
                     <div class="habbit">
                         <div class="habbit__day"></div>
                         <form onsubmit="createDay(event)" class="habbit__form" method="get">
@@ -47,6 +44,7 @@
                             <button type="submit" class="form__add">Готово</button>
                         </form>
                     </div>
+                </main>
                 </div>
                 <div class="overlay overlay__hidden">
                     <div class="modal" id="modal">
@@ -66,7 +64,7 @@
                         <button onclick="toggleModal()" class="icon close__btn">
                             <img src="./image/cross.svg" alt="close modal">
                         </button>
-                        <form class="modal__form">
+                        <form class="modal__form" onsubmit="addHabbit(event)">
                             <input type="text" name="name" placeholder="Название">
                             <input type="text" hidden name="icon" class="modal__form-icon-input">
                             <input type="number" name="target" placeholder="Цель">
@@ -75,7 +73,6 @@
                     </div>
                 </div>
             </div>
-            </main>
     </div>
     <script src="./scripts/app.js"></script>
 </body>
